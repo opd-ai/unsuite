@@ -8,7 +8,7 @@
 
 `unpeople` demonstrated that a single, well-structured Go module — pure stdlib, deterministic, sub-100 ms — can produce high-quality procedural 3D meshes for an entire species family. The `unsuite` project applies that exact pattern to **every asset category a 3D game requires**: terrain, vegetation, architecture, creatures, weapons, clothing, materials, audio, narrative, VFX, vehicles, and lore.
 
-The end state: **one seed number + a parameter struct → a complete, playable 3D game world** — renderable in the [Kaiju engine](https://kaijuengine.com) and consumable by the existing opd-ai game suite (venture, vania, wyrm, violence, velocity, way, where, whack).
+The existing opd-ai game suite (venture, vania, wyrm, violence, velocity, way, where, whack) are **Ebitengine-based 2D** games. The un-series is the first to move into **3D**, targeting the [Kaiju engine](https://kaijuengine.com). The end state: **one seed number + a parameter struct → a complete, playable 3D game world** renderable in Kaiju.
 
 ---
 

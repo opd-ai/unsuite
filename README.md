@@ -1,6 +1,6 @@
 # unsuite — The Un-Series Procedural Asset Generator Suite
 
-> A coordinated family of 34 pure-Go procedural generator libraries that together produce every asset needed for a complete 3D game — characters, creatures, terrain, buildings, weapons, materials, audio, narrative, VFX, and more. Zero external dependencies. Deterministic. Kaiju engine compatible.
+> A coordinated family of 34 pure-Go procedural generator libraries that together produce every asset needed for a complete 3D game — characters, creatures, terrain, buildings, weapons, materials, audio, narrative, VFX, and more. Zero external dependencies. Deterministic. The first 3D entry in the opd-ai procedural game suite, targeting the [Kaiju engine](https://kaijuengine.com).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -16,18 +16,18 @@ The goal: **a seed number and a set of parameters produce an entire game world.*
 
 ## Existing Procedural Game Suite
 
-The un-series generators are the asset backends for this family of 100% procedural games built on the [Kaiju engine](https://kaijuengine.com):
+The existing opd-ai games are **Ebitengine-based 2D** titles. The un-series is the first part of the suite to move into **3D** territory, targeting the [Kaiju engine](https://kaijuengine.com):
 
-| Repo | Description |
-|------|-------------|
-| [venture](https://github.com/opd-ai/venture) | 2D procedural RPG — source of reusable terrain, building, quest, and dialog logic |
-| [violence](https://github.com/opd-ai/violence) | Procedural raycaster — reusable audio and rendering pipeline |
-| [velocity](https://github.com/opd-ai/velocity) | Procedural racing game |
-| [vania](https://github.com/opd-ai/vania) | Procedural metroidvania — seed mixing, caching, and validation patterns |
-| [way](https://github.com/opd-ai/way) | Procedural road/path game |
-| [where](https://github.com/opd-ai/where) | Procedural exploration game |
-| [whack](https://github.com/opd-ai/whack) | Procedural action game |
-| [wyrm](https://github.com/opd-ai/wyrm) | First-person 3D survival RPG — primary consumer of the full un-series suite |
+| Repo | Engine | Description |
+|------|--------|-------------|
+| [venture](https://github.com/opd-ai/venture) | Ebitengine | 2D procedural RPG — source of reusable terrain, building, quest, and dialog logic |
+| [violence](https://github.com/opd-ai/violence) | Ebitengine | Procedural raycaster — reusable audio and rendering pipeline |
+| [velocity](https://github.com/opd-ai/velocity) | Ebitengine | Procedural racing game |
+| [vania](https://github.com/opd-ai/vania) | Ebitengine | Procedural metroidvania — seed mixing, caching, and validation patterns |
+| [way](https://github.com/opd-ai/way) | Ebitengine | Procedural road/path game |
+| [where](https://github.com/opd-ai/where) | Ebitengine | Procedural exploration game |
+| [whack](https://github.com/opd-ai/whack) | Ebitengine | Procedural action game |
+| [wyrm](https://github.com/opd-ai/wyrm) | Ebitengine | Procedural first-person survival RPG |
 
 ---
 
