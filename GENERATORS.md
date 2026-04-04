@@ -125,7 +125,7 @@ This is the authoritative catalog of all 34 generator entries in the `unsuite` f
 |--------|-----------|
 | 🟢 Complete | `unpeople` |
 | 🟡 Partial (logic in existing suite) | `unlands`, `unskies`, `unbuildings`, `undepths`, `untowns`, `unsounds`, `unmelodies`, `unquests`, `unwords` |
-| 🔴 Planned (new) | All remaining 24 generators |
+| 🔴 Planned (new) | All remaining generators not listed above |
 
 ---
 
