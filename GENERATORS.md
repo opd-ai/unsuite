@@ -1,6 +1,6 @@
 # GENERATORS.md — Canonical Reference Table
 
-This is the authoritative catalog of all 34 procedural asset generators in the `unsuite` family. Each generator is (or will be) an independent Go module under the `opd-ai` organisation.
+This is the authoritative catalog of all 34 generator entries in the `unsuite` family. Standalone generators are (or will be) independent Go modules under the `opd-ai` organisation; some entries may remain subsets of larger generators until extracted into their own modules.
 
 **Status legend:**
 - 🟢 Complete — released, CI green
