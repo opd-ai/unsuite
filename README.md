@@ -1,6 +1,6 @@
 # unsuite — The Un-Series Procedural Asset Generator Suite
 
-> A coordinated family of 34 pure-Go procedural generator libraries that together produce every asset needed for a complete 3D game — characters, creatures, terrain, buildings, weapons, materials, audio, narrative, VFX, and more. Zero external dependencies. Deterministic. The first 3D entry in the opd-ai procedural game suite, targeting the [Kaiju engine](https://kaijuengine.com).
+> A coordinated family of 33 pure-Go procedural generator libraries that together produce every asset needed for a complete 3D game — characters, creatures, terrain, buildings, weapons, materials, audio, narrative, VFX, and more. Zero external dependencies. Deterministic. The first 3D entry in the opd-ai procedural game suite, targeting the [Kaiju engine](https://kaijuengine.com).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -33,7 +33,7 @@ The existing opd-ai games are **Ebitengine-based 2D** titles. The un-series is t
 
 ## Design Principles
 
-All 34 generators share the same architecture contract inherited from `unpeople`:
+All 33 generators share the same architecture contract inherited from `unpeople`:
 
 1. **Pure Go, zero external dependencies** — stdlib + custom PRNG only; no CGo, no vendored C libraries.
 2. **Deterministic** — identical seed + params always produce bit-identical output across platforms and Go versions.
@@ -66,7 +66,7 @@ See [`GENERATORS.md`](GENERATORS.md) for the full canonical reference table. Qui
 | # | Repo | Category | Priority | Description |
 |---|------|----------|----------|-------------|
 | 1 | [unpeople](https://github.com/opd-ai/unpeople) | Characters | P0 | Bipedal humanoid meshes (10 species) |
-| 2 | unbeasts | Creatures | P1 | Quadruped/flying/swimming animals & monsters |
+| 2 | unbeasts | Creatures | P1 | Quadruped/flying/swimming animals & monsters; all rideable by appropriately sized riders |
 | 3 | unmotions | Characters | P1 | Procedural locomotion animation cycles |
 | 4 | ungarments | Characters | P3 | Clothing & armor fitted to unpeople bodies |
 | 5 | unfibers | Characters | P5 | Procedural hair, beards, and fur |
@@ -98,7 +98,6 @@ See [`GENERATORS.md`](GENERATORS.md) for the full canonical reference table. Qui
 | 31 | unsparks | VFX | P4 | Particle systems (fire, smoke, sparks) |
 | 32 | unspells | VFX | P4 | Magic and spell VFX graphs |
 | 33 | unrides | Vehicles | P3 | Carts, ships, hovercrafts, mechs |
-| 34 | *(mounts)* | Vehicles | — | Covered as a subset of `unbeasts` |
 
 ---
 

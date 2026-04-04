@@ -177,20 +177,22 @@ The existing opd-ai game suite (venture, vania, wyrm, violence, velocity, way, w
 
 ### `unbeasts` — Creature Meshes
 
-**Description:** Quadrupeds, flying creatures, swimming creatures, and monsters. Body-plan-driven generation with variable limb counts.
+**Description:** Quadrupeds, flying creatures, swimming creatures, and monsters. Body-plan-driven generation with variable limb counts. All beasts include mount-point annotations so that any beast can serve as a mount for an appropriately sized rider.
 
 **Key technical challenges:**
 - Body plan grammar (central body, limb attachment sockets, head placement)
 - Skin/scale/feather texture generation compatible with `unsurfaces`
 - Skeleton generation matching the body plan for use by `unmotions`
+- Mount-point annotation and saddle sub-mesh attachment for rider compatibility
 
 **Key params:** `Seed`, `BodyPlan`, `LimbCount`, `Size`, `SkinType`, `Archetype`
 
-**Output:** `Mesh` + skeleton + skin texture
+**Output:** `Mesh` + skeleton + skin texture + mount-point metadata
 
 **Validation criteria:**
 - All `BodyPlan` × `Archetype` combinations produce non-intersecting meshes
 - Skeleton joint count matches limb count
+- Every beast has at least one valid mount-point for a rider of appropriate size
 - <100 ms per creature
 
 ---
@@ -573,7 +575,7 @@ Procedural hair styles, beards, and creature fur via strand-based or card-based 
 
 ### 🏁 Integration Milestone
 
-**All 34 generators wired together.** A single `WorldSeed` struct passed through a `WorldBuilder` orchestrator produces:
+**All 33 generators wired together.** A single `WorldSeed` struct passed through a `WorldBuilder` orchestrator produces:
 
 - Terrain heightmap (`unlands`)
 - Biome splat map → material assignment (`unsurfaces`)

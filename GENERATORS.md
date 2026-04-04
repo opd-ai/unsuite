@@ -1,6 +1,6 @@
 # GENERATORS.md — Canonical Reference Table
 
-This is the authoritative catalog of all 34 generator entries in the `unsuite` family. Standalone generators are (or will be) independent Go modules under the `opd-ai` organisation; some entries may remain subsets of larger generators until extracted into their own modules.
+This is the authoritative catalog of all 33 generators in the `unsuite` family. Each generator is (or will be) an independent Go module under the `opd-ai` organisation.
 
 **Status legend:**
 - 🟢 Complete — released, CI green
@@ -14,7 +14,7 @@ This is the authoritative catalog of all 34 generator entries in the `unsuite` f
 | # | Generator | Repo | Category | Priority | Status | Description | Key Params | Output Format | Reuses From | Technical Approach |
 |---|-----------|------|----------|----------|--------|-------------|------------|---------------|-------------|-------------------|
 | 1 | **unpeople** | [opd-ai/unpeople](https://github.com/opd-ai/unpeople) | Characters | P0 | 🟢 Complete | Bipedal humanoid character meshes — 10 species, 20+ parameters | `Seed`, `Species`, `Build`, `Age`, `FaceParams` | `Mesh` (vertices, indices, skeleton) OBJ / glTF / GLB | — | Primitive-based procedural assembly; per-species morph tables; custom PRNG |
-| 2 | **unbeasts** | opd-ai/unbeasts | Creatures | P1 | 🔴 Planned | Quadruped, flying, swimming animals & monsters | `Seed`, `BodyPlan`, `LimbCount`, `Size`, `SkinType`, `Archetype` | `Mesh` + skeleton + skin texture | `unpeople` mesh & export pipeline | Body-plan grammar; limb socket attachment; skin/scale/feather texture from noise |
+| 2 | **unbeasts** | opd-ai/unbeasts | Creatures | P1 | 🔴 Planned | Quadruped, flying, swimming animals & monsters; all beasts include mount-point annotations for appropriately sized riders | `Seed`, `BodyPlan`, `LimbCount`, `Size`, `SkinType`, `Archetype` | `Mesh` + skeleton + skin texture + mount-point metadata | `unpeople` mesh & export pipeline | Body-plan grammar; limb socket attachment; skin/scale/feather texture from noise; mount-point annotation and saddle sub-mesh attachment |
 | 3 | **unmotions** | opd-ai/unmotions | Characters | P1 | 🔴 Planned | Procedural locomotion animation cycles (walk, run, fly, swim, attack, idle) | `Skeleton`, `GaitType`, `Speed`, `Mass`, `AnimationType` | BVH joint keyframe sequence | `unbeasts` skeleton output | IK foot-planting; gait pattern library; blend weight generation |
 | 4 | **ungarments** | opd-ai/ungarments | Characters | P3 | 🔴 Planned | Clothing & armor meshes that conform to `unpeople` body shapes | `Seed`, `BodyMesh`, `GarmentType`, `Material`, `Era`, `Coverage` | `Mesh` (fitted) + UV map | `unpeople` body mesh; `unsurfaces` textures | Shrink-wrap projection onto body mesh; seam-based UV unwrap |
 | 5 | **unfibers** | opd-ai/unfibers | Characters | P5 | 🔴 Planned | Procedural hair styles, beards, and creature fur | `Seed`, `Length`, `Curl`, `Density`, `Species`, `Style` | Strand/card mesh + texture | `unpeople` scalp geometry | Strand simulation (rest pose); card mesh fallback for LOD; noise-driven curl |
@@ -102,7 +102,6 @@ This is the authoritative catalog of all 34 generator entries in the `unsuite` f
 | # | Generator | Repo | Category | Priority | Status | Description | Key Params | Output Format | Reuses From | Technical Approach |
 |---|-----------|------|----------|----------|--------|-------------|------------|---------------|-------------|-------------------|
 | 33 | **unrides** | opd-ai/unrides | Vehicles | P3 | 🔴 Planned | Genre-dependent vehicles: carts, ships, hovercrafts, mechs | `Seed`, `VehicleClass`, `Era`, `Size`, `ArmorLevel` | `Mesh` + physics param struct + mount-point metadata | `unpeople` export pipeline; `wyrm` vehicle ECS | Parametric vehicle assembly grammar; era/class-driven component selection; physics param tables |
-| 34 | ***(mounts)*** | *(subset of unbeasts)* | Vehicles | — | — | Horses, wolves, lizards, and other rideable creatures — a subset of `unbeasts` generation | `Seed`, `MountType`, `Saddle` | `Mesh` + mount-point annotations | `unbeasts` | Mount-point annotation on `unbeasts` output; saddle sub-mesh attachment |
 
 ---
 
