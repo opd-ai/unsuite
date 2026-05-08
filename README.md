@@ -123,6 +123,20 @@ Before writing new code, extract and adapt logic already present in the existing
 4. **Milestone tracking** is managed in [`ROADMAP.md`](ROADMAP.md).
 5. All code is MIT licensed — match the license in your new repo.
 
+## Bootstrap Planned Repos
+
+Use [`scripts/bootstrap-planned-repos.sh`](scripts/bootstrap-planned-repos.sh) to create every `🔴 Planned` repo from [`GENERATORS.md`](GENERATORS.md) with `gh` and a shared boilerplate template.
+
+```bash
+./scripts/bootstrap-planned-repos.sh --dry-run
+./scripts/bootstrap-planned-repos.sh --template-repo opd-ai/unpeople --visibility public
+```
+
+Notes:
+- The script treats `GENERATORS.md` as the source of truth and only creates rows marked `🔴 Planned`.
+- The template repo must already be marked as a GitHub template repository.
+- Use `--repo <name>` to provision a subset, or `--owner <org>` to target a different organization.
+
 ---
 
 ## License
