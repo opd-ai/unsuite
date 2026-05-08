@@ -10,7 +10,7 @@ Create every 🔴 Planned repository listed in GENERATORS.md from a shared GitHu
 
 Options:
   --owner OWNER                GitHub owner/org for the new repositories (default: opd-ai)
-  --template-repo OWNER/REPO   GitHub template repository to copy from (default: opd-ai/unpeople)
+  --template-repo OWNER/REPO   GitHub template repository to copy from (default: opd-ai/untemplate)
   --visibility VISIBILITY      public, private, or internal (default: public)
   --repo NAME                  Limit execution to a specific repo name; may be repeated
   --dry-run                    Print the gh commands without creating anything
